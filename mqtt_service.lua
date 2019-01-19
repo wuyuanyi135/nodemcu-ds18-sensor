@@ -34,7 +34,7 @@ function readtask()
     myow.readAll()
     myow.broadcastConvert()
     for i=1,#myow.addr do
-        publish("data", v.data);
+        publish("data", myow.addr[i].data)
         for k,v in pairs(myow.addr[i]) do
             print(k,v)
         end

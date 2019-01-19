@@ -1,1 +1,1 @@
-dofile("main.lua")
+--("main.lua")
