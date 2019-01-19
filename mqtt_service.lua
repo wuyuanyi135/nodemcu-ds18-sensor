@@ -20,8 +20,9 @@ mqtt_service.init = function ()
     mqtt_object:connect("192.168.43.1",1883,0, 0, function()
         print("connected")
         mqtt_object:publish("device/"..node.chipid().."/status", "on", 0, 1);
+        timer_read:start()
     end)
-    timer_read:start()
+    
 end
 
  function publish(address, data)
